@@ -152,7 +152,7 @@ def generate(sentences, tokenizer, model, max_new_tokens):
 
     model_has_system_prompt = supports_system_prompt(tokenizer)
     system_prompt= """Following this reasoning strategy, generate the reasoning for the last 'text' - 'target' pair and infer the stance (against, favor or neutral) of the last text with respect to it's target."""
-    prompt_path = "/scratch/jfernandezde/stance/generate_reasoning/prompts/prompt_examples.jsonl"
+    prompt_path = "./prompts/prompt_examples.jsonl"
     formated_fewshot = load_prompt(prompt_path, system_prompt, model_has_system_prompt)
     #formated_sen_chat = formated_fewshot + [{"role": "user", "content":s}]
 
